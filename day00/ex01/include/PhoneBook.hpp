@@ -14,16 +14,16 @@ class PhoneBook
 {
 private:
 	int UserNumber;
-	void GetShortUserInfo(void);
+	void GetShortUserInfo(void) const;
 	string UserList[8][5];
-	void PrintUserList(int index);
-	bool PrintCorrectIndex(void);
+	void PrintUserList(int index) const;
+	bool PrintCorrectIndex(void) const;
 
 
 public:
 	PhoneBook(void);
 	void GetNewUser(void);
-	void HandlerSearchCmd(void);
+	void HandlerSearchCmd(void) const;
 };
 
 # endif 

@@ -30,7 +30,7 @@ void PhoneBook::GetNewUser(void)
 // Sinon, affichez les informations du contact, une par ligne.
 
 
-void PhoneBook::GetShortUserInfo(void)
+void PhoneBook::GetShortUserInfo(void) const
 {
 	string tmp;
 	for(int y = 0; y < this->UserNumber; y++)
@@ -52,13 +52,13 @@ void PhoneBook::GetShortUserInfo(void)
 
 }
 
-void PhoneBook::PrintUserList(int index)
+void PhoneBook::PrintUserList(int index) const
 {
 	for(int i = 0; i < 5; i++)
 		cout << this->UserList[index][i] << endl;
 }
 
-bool PhoneBook::PrintCorrectIndex(void)
+bool PhoneBook::PrintCorrectIndex(void) const
 {
 	int i;
 	cout << "Choose a correct index to print : ";
@@ -68,7 +68,7 @@ bool PhoneBook::PrintCorrectIndex(void)
 		return (cout << "\e[31m[Error] : \e[0m",  cin.clear(),  cin.ignore(1024, '\n'), false);
 }
 
-void PhoneBook::HandlerSearchCmd(void)
+void PhoneBook::HandlerSearchCmd(void) const
 {
 	if (this->UserNumber != 0)
 	{

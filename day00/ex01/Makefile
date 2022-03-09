@@ -7,7 +7,7 @@ INCLUDE =	-I ./include
 
 OBJS = ${SRCS:.cpp=.o}
 
-NAME = phonebook
+NAME = agenda
 
 COMPIL = c++ -std=c++98 -Wall -Werror -Wextra -g
 
