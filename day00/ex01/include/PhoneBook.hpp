@@ -13,11 +13,11 @@ using namespace std;
 class PhoneBook
 {
 private:
-	int UserNumber;
-	void GetShortUserInfo(void) const;
-	string UserList[8][5];
-	void PrintUserList(int index) const;
-	bool PrintCorrectIndex(void) const;
+	int		_UserNumber;
+	void	_GetShortUserInfo(void) const;
+	string	_UserList[8][5];
+	void 	_Print_UserList(int index) const;
+	bool 	_PrintCorrectIndex(void) const;
 
 
 public:

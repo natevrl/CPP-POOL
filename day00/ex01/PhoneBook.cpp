@@ -7,15 +7,15 @@ void PhoneBook::GetNewUser(void)
 		
 	Contact user;
 	
-	if (this->UserNumber > 7)
+	if (this->_UserNumber > 7)
 	{
 		printf("TOO MUCH USER, 8 MAX\n");
 		return ;
 	}
 	user.CreateContact();
 	for (int i = 0; i < 5; i++)
-		this->UserList[this->UserNumber][i] = user.ContactData[i];
-	this->UserNumber++;
+		this->_UserList[this->_UserNumber][i] = user.ContactData[i];
+	this->_UserNumber++;
 }
 
 // SEARCH : affiche le contact demandé
@@ -30,50 +30,50 @@ void PhoneBook::GetNewUser(void)
 // Sinon, affichez les informations du contact, une par ligne.
 
 
-void PhoneBook::GetShortUserInfo(void) const
+void PhoneBook::_GetShortUserInfo(void) const
 {
 	string tmp;
-	for(int y = 0; y < this->UserNumber; y++)
+	for(int y = 0; y < this->_UserNumber; y++)
 	{
 		cout << setw(10) << y << "|";
 		for (int i = 0; i < 3; i++)
 		{
-			if (this->UserList[y][i].size() > 10)
+			if (this->_UserList[y][i].size() > 10)
 			{
-				tmp = this->UserList[y][i];
+				tmp = this->_UserList[y][i];
 				tmp[9] = '.';
 				cout << setw(10) << tmp.substr(0, 10) << "|";
 			}
 			else
- 				cout << setw(10) <<  this->UserList[y][i].substr(0, 10) << "|";
+ 				cout << setw(10) <<  this->_UserList[y][i].substr(0, 10) << "|";
 		}
 			cout << endl;
 	}
 
 }
 
-void PhoneBook::PrintUserList(int index) const
+void PhoneBook::_Print_UserList(int index) const
 {
 	for(int i = 0; i < 5; i++)
-		cout << this->UserList[index][i] << endl;
+		cout << this->_UserList[index][i] << endl;
 }
 
-bool PhoneBook::PrintCorrectIndex(void) const
+bool PhoneBook::_PrintCorrectIndex(void) const
 {
 	int i;
 	cout << "Choose a correct index to print : ";
-	if (cin >> i && i < this->UserNumber)  
-		return (this->PrintUserList(i), true);
+	if (cin >> i && i < this->_UserNumber)  
+		return (this->_Print_UserList(i), true);
 	else
 		return (cout << "\e[31m[Error] : \e[0m",  cin.clear(),  cin.ignore(1024, '\n'), false);
 }
 
 void PhoneBook::HandlerSearchCmd(void) const
 {
-	if (this->UserNumber != 0)
+	if (this->_UserNumber != 0)
 	{
-		this->GetShortUserInfo();
-		while (!this->PrintCorrectIndex());
+		this->_GetShortUserInfo();
+		while (!this->_PrintCorrectIndex());
 	}
 	else
 		cout << "You need to ADD one contact before" << endl;
@@ -82,5 +82,5 @@ void PhoneBook::HandlerSearchCmd(void) const
 
 PhoneBook::PhoneBook()
 {
-	this->UserNumber = 0;
+	this->_UserNumber = 0;
 }
