@@ -1,3 +1,5 @@
+.vscode
+vgcore.*
 *.gch
 *.out
 *.swp
