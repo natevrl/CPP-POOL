@@ -1,20 +1,15 @@
-SRCS =  main.cpp \
-		PhoneBook.cpp \
-		Contact.cpp \
-
-INCLUDE =	-I ./include
-
+SRCS = megaphone.cpp\
 
 OBJS = ${SRCS:.cpp=.o}
 
-NAME = phonebook
-
-COMPIL = c++ -std=c++98 -Wall -Werror -Wextra -g
+NAME = megaphone
+COMPIL = c++ -std=c++98 -Wall -Werror -Wextra
 
 all: ${NAME}
 
 ${NAME}: ${OBJS}
-		${COMPIL} -o ${NAME} ${SRCS} 
+		${COMPIL} -o ${NAME} ${SRCS}
+
 clean: 
 	rm -f ${OBJS}
 

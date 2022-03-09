@@ -13,11 +13,8 @@ void PhoneBook::GetNewUser(void)
 		return ;
 	}
 	user.CreateContact();
-	this->UserList[this->UserNumber][0] = user.ContactData[0];
-	this->UserList[this->UserNumber][1] = user.ContactData[1];
-	this->UserList[this->UserNumber][2] = user.ContactData[2];
-	this->UserList[this->UserNumber][3] = user.ContactData[3];
-	this->UserList[this->UserNumber][4] = user.ContactData[4];
+	for (int i = 0; i < 5; i++)
+		this->UserList[this->UserNumber][i] = user.ContactData[i];
 	this->UserNumber++;
 }
 
@@ -33,23 +30,55 @@ void PhoneBook::GetNewUser(void)
 // Sinon, affichez les informations du contact, une par ligne.
 
 
-void PhoneBook::PrintUserList(void)
+void PhoneBook::GetShortUserInfo(void)
 {
+	string tmp;
 	for(int y = 0; y < this->UserNumber; y++)
 	{
 		cout << setw(10) << y << "|";
 		for (int i = 0; i < 3; i++)
-			(this->UserList[y][i].size() > 10) ? cout << setw(10) << left << setfill('.') 
-				<< this->UserList[y][i].substr(0, 9) << "|" : cout << setw(10) <<  this->UserList[y][i].substr(0, 10) << "|";
-		cout << endl;
+		{
+			if (this->UserList[y][i].size() > 10)
+			{
+				tmp = this->UserList[y][i];
+				tmp[9] = '.';
+				cout << setw(10) << tmp.substr(0, 10) << "|";
+			}
+			else
+ 				cout << setw(10) <<  this->UserList[y][i].substr(0, 10) << "|";
+		}
+			cout << endl;
 	}
 
 }
 
-// void PhoneBook::PrintUserList(Contact list[2])
-// {
-// 	for(int i = 0; list[i], i++)
-// }
+void PhoneBook::PrintUserList(int index)
+{
+	for(int i = 0; i < 5; i++)
+		cout << this->UserList[index][i] << endl;
+}
+
+bool PhoneBook::PrintCorrectIndex(void)
+{
+	int i;
+	cout << "Choose a correct index to print : ";
+	if (cin >> i && i < this->UserNumber)  
+		return (this->PrintUserList(i), true);
+	else
+		return (cout << "\e[31m[Error] : \e[0m",  cin.clear(),  cin.ignore(1024, '\n'), false);
+}
+
+void PhoneBook::HandlerSearchCmd(void)
+{
+	if (this->UserNumber != 0)
+	{
+		this->GetShortUserInfo();
+		while (!this->PrintCorrectIndex());
+	}
+	else
+		cout << "You need to ADD one contact before" << endl;
+}
+
 
 PhoneBook::PhoneBook()
 {

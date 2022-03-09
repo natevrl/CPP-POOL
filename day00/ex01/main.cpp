@@ -14,7 +14,7 @@ int main(void)
 		if (stdin == "ADD")
 			repertoire.GetNewUser();
 		else if (stdin == "SEARCH")
-			repertoire.PrintUserList();
+			repertoire.HandlerSearchCmd();
 		getline(cin, stdin);
 	}
 	return 0;

@@ -9,19 +9,21 @@
 
 using namespace std;
 
+
 class PhoneBook
 {
 private:
 	int UserNumber;
-	string FillOneColumn(string str);
+	void GetShortUserInfo(void);
+	string UserList[8][5];
+	void PrintUserList(int index);
+	bool PrintCorrectIndex(void);
+
 
 public:
 	PhoneBook(void);
-	// ~PhoneBook();
-	string UserList[8][5];
 	void GetNewUser(void);
-	void PrintUserList(void);
-	// void PrintUserList(Contact list[2]);
+	void HandlerSearchCmd(void);
 };
 
 # endif 

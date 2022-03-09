@@ -9,17 +9,13 @@
 void Contact::CreateContact(void)
 {
 	cout << "first name : ";
-	cin >> this->ContactData[0];
-
+	getline(cin, this->ContactData[0]);
 	cout << "last name : ";
-	cin >> this->ContactData[1];
-
+	getline(cin, this->ContactData[1]);
 	cout << "nickname : ";
-	cin >> this->ContactData[2];
-
+	getline(cin, this->ContactData[2]);
 	cout << "darkest secret : ";
-	cin >> this->ContactData[3];
-
+	getline(cin, this->ContactData[3]);
 	cout << "phone number : ";
-	cin >> this->ContactData[4];
+	getline(cin, this->ContactData[4]);
 }
