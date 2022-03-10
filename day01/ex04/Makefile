@@ -1,13 +1,12 @@
 SRCS =  main.cpp \
-		Zombie.cpp \
-		zombieHorde.cpp \
+
 
 # INCLUDE =	-I ./include
 
 
 OBJS = ${SRCS:.cpp=.o}
 
-NAME = zombie
+NAME = filestream
 
 COMPIL = c++ -std=c++98 -Wall -Werror -Wextra
 
