@@ -14,12 +14,12 @@ class HumanB
 {
 private:
 	string _name;
-	Weapon _weapon;
+	Weapon *_weapon;
 public:
 	HumanB(string name);
 	~HumanB();
 	void attack(void) const;
-	void setWeapon(Weapon weap);
+	void setWeapon(Weapon &weap);
 };
 
 
