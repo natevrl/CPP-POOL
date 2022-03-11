@@ -8,14 +8,14 @@
 
 void Contact::CreateContact(void)
 {
-	cout << "first name : ";
-	getline(cin, this->ContactData[0]);
-	cout << "last name : ";
-	getline(cin, this->ContactData[1]);
-	cout << "nickname : ";
-	getline(cin, this->ContactData[2]);
-	cout << "darkest secret : ";
-	getline(cin, this->ContactData[3]);
-	cout << "phone number : ";
-	getline(cin, this->ContactData[4]);
+	std::cout << "first name : ";
+	std::getline(std::cin, this->ContactData[0]);
+	std::cout << "last name : ";
+	std::getline(std::cin, this->ContactData[1]);
+	std::cout << "nickname : ";
+	std::getline(std::cin, this->ContactData[2]);
+	std::cout << "darkest secret : ";
+	std::getline(std::cin, this->ContactData[3]);
+	std::cout << "phone number : ";
+	std::getline(std::cin, this->ContactData[4]);
 }

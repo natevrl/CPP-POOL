@@ -1,24 +1,24 @@
-#include <string>
+#include <std::string>
 #include <cstdio>
 #include <iostream>
 
-using namespace std;
+
 
 
 
 int main( void )
 {
-	string str = "HI THIS IS BRAIN";
-	string *stringPTR = &str;
-	string &stringREF = str;
+	std::string str = "HI THIS IS BRAIN";
+	std::string *stringPTR = &str;
+	std::string &stringREF = str;
 
-	cout << "str address : " << &str << endl << endl;
-	cout << "PTR address : " << stringPTR << endl << endl;
-	cout << "REFERENCE address : " << &stringREF << endl << endl;
+	std::cout << "str address : " << &str << std::endl << std::endl;
+	std::cout << "PTR address : " << stringPTR << std::endl << std::endl;
+	std::cout << "REFERENCE address : " << &stringREF << std::endl << std::endl;
 
-	cout << "str value : " << str << endl << endl;
-	cout << "ptr value with dereferencment : " << *stringPTR << endl << endl;
-	cout << "reference value : " << stringREF << endl;
+	std::cout << "str value : " << str << std::endl << std::endl;
+	std::cout << "ptr value with dereferencment : " << *stringPTR << std::endl << std::endl;
+	std::cout << "reference value : " << stringREF << std::endl;
 
 	return 0;
 }

@@ -7,17 +7,17 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
+
 
 class Weapon
 {
 private:
-	string _type;
+	std::string _type;
 public:
-	Weapon(string weapon);
+	Weapon(std::string weapon);
 	~Weapon();
-	void setType(string name);
-	string const &getType(void);
+	void setType(std::string name);
+	std::string const &getType(void);
 
 };
 

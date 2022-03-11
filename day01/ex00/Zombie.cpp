@@ -3,9 +3,9 @@
 
 void Zombie::Announce(void)
 {
-	cout << name + ": BraiiiiiiinnnzzzZ..." << endl;
+	std::cout << name + ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-Zombie::Zombie(string n): name(n) {
+Zombie::Zombie(std::string n): name(n) {
 	
 }

@@ -2,13 +2,13 @@
 
 int main(int ac, char const *av[])
 {
-	string filestream;
-	string s1, s2, file, buf, replace;
+	std::string filestream;
+	std::string s1, s2, file, buf, replace;
 	size_t i;
 
 	//handle args error
 	if (ac != 4)
-		return (cout << "needs 3 args" << endl, -1);
+		return (std::cout << "needs 3 args" << std::endl, -1);
 
 	// init args
 	filestream = av[1];
@@ -19,7 +19,7 @@ int main(int ac, char const *av[])
 	std::ifstream readingStream;
 	readingStream.open(filestream.c_str());
 	if (!readingStream.is_open()) 
-		return (cerr << "open() error" << endl, -1);
+		return (std::cerr << "open() error" << std::endl, -1);
 
 	//copying line by line filestream to file variable
 	while (getline(readingStream, buf))
@@ -27,12 +27,12 @@ int main(int ac, char const *av[])
 
 	//replace all s1 occurence on filestream by s2
 	buf.clear();
-	while ((i = file.find(s1)) != string::npos)
+	while ((i = file.find(s1)) != std::string::npos)
 		buf = file.erase(i, s1.length()).insert(i, s2);
 
 	// writing the buffer on the new file : <filestream>.replace
 	replace = ".replace";
-	ofstream writingStream(filestream.append(".replace").c_str());
+	std::ofstream writingStream(filestream.append(".replace").c_str());
 	writingStream << buf;
 
 	readingStream.close();

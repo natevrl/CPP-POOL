@@ -8,15 +8,15 @@
 #include <iomanip>
 
 #include "Weapon.hpp"
-using namespace std;
+
 
 class HumanB
 {
 private:
-	string _name;
+	std::string _name;
 	Weapon *_weapon;
 public:
-	HumanB(string name);
+	HumanB(std::string name);
 	~HumanB();
 	void attack(void) const;
 	void setWeapon(Weapon &weap);

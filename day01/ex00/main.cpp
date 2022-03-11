@@ -6,13 +6,13 @@ int main(void)
 	Zombie* dynamic = newZombie("dynamic");
 
 
-	cout << "basic creating object" << endl;
+	std::cout << "basic creating object" << std::endl;
 	main_zombie.Announce();
 
-	cout << "creating object with dynamic allocation" << endl;
+	std::cout << "creating object with dynamic allocation" << std::endl;
 	dynamic->Announce();
 	
-	cout << "creating object with extern function" << endl;
+	std::cout << "creating object with extern function" << std::endl;
 	randomChump("random");
 
 	delete dynamic;

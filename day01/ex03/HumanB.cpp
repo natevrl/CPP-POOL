@@ -2,7 +2,7 @@
 #include "Weapon.hpp"
 
 
-HumanB::HumanB(string name): _name(name)
+HumanB::HumanB(std::string name): _name(name)
 {
 	;
 };
@@ -14,7 +14,7 @@ HumanB::~HumanB()
 
 void HumanB::attack(void) const
 {
-	cout << this->_name << " attacks with their " << this->_weapon->getType() << endl;
+	std::cout << this->_name << " attacks with their " << this->_weapon->getType() << std::endl;
 };
 
 void HumanB::setWeapon(Weapon &weap)

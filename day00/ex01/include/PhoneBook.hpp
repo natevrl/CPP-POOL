@@ -7,7 +7,7 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
+
 
 
 class PhoneBook
@@ -15,7 +15,7 @@ class PhoneBook
 private:
 	int		_UserNumber;
 	void	_GetShortUserInfo(void) const;
-	string	_UserList[8][5];
+	std::string	_UserList[8][5];
 	void 	_Print_UserList(int index) const;
 	bool 	_PrintCorrectIndex(void) const;
 

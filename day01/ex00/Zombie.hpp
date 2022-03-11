@@ -7,15 +7,13 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
-
 
 class Zombie {
 private:
-	string name;
+	std::string name;
 
 public:
-	Zombie(string n);
+	Zombie(std::string n);
 	void Announce(void);
 };
 

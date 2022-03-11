@@ -3,10 +3,10 @@
 
 void Zombie::Announce(void) const
 {
-	cout << _name + ": BraiiiiiiinnnzzzZ..." << endl;
+	std::cout << _name + ": BraiiiiiiinnnzzzZ..." << std::std::endl;
 }
 
-// Zombie::Zombie(string nom): name(nom) {
+// Zombie::Zombie(std::string nom): name(nom) {
 	
 // }
 
@@ -16,7 +16,7 @@ Zombie::Zombie(void)
 }
 
 
-void	Zombie::setName( string newName )
+void	Zombie::setName( std::string newName )
 {
 	this->_name = newName;
 }

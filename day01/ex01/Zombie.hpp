@@ -7,18 +7,18 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
+
 
 
 class Zombie {
 
 private:
-	string _name;
+	std::string _name;
 
 public:
 	Zombie(void);
 	void Announce(void) const;
-	void setName(string newName);
+	void setName(std::string newName);
 
 };
 
