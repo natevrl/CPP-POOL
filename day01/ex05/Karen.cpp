@@ -1,5 +1,4 @@
 #include "Karen.hpp"
-#include <map>
 
 Karen::Karen(/* args */)
 {
