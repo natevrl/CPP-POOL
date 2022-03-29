@@ -4,8 +4,6 @@
 #include <cstdio>
 #include <iostream>
 #include <iomanip>
-
-#include <ScavTrap.hpp>
  
 class ClapTrap 
 {
@@ -14,7 +12,7 @@ class ClapTrap
 		ClapTrap(std::string name); // default constructor
 		~ClapTrap(void); // Destructor
 		ClapTrap (ClapTrap const &src); // Constructor per Copy
-		// ClapTrap & operator=(ClapTrap const &rhs); // Operator Overload
+		ClapTrap & operator=(ClapTrap const &rhs); // Operator Overload
     // getter & setter
         int getDamage(void) const;
         int getPdv(void) const;
@@ -29,7 +27,7 @@ class ClapTrap
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
 
-	private:
+	protected:
         std::string _name;
         int _pdv;
         int _energy;
@@ -37,6 +35,6 @@ class ClapTrap
 
 };
 
-// std::ostream & operator<<(std::ostream & o, ClapTrap const & rhs );
+std::ostream & operator<<(std::ostream & o, ClapTrap const & rhs );
 
 #endif // !ClapTrap_H

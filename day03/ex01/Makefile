@@ -1,11 +1,12 @@
 SRCS =  main.cpp \
 		ClapTrap.cpp \
+		ScavTrap.cpp
 
 # INCLUDE =	-I ./include
 
 OBJS = ${SRCS:.cpp=.o}
 
-NAME = claptrap
+NAME = scavtrap
 
 COMPIL = c++ -std=c++98 -Wall -Werror -Wextra
 
