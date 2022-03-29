@@ -9,11 +9,12 @@ class ClapTrap
 {
 public:
 	// canonique form
-	ClapTrap(std::string name);				  // default constructor
+	ClapTrap(std::string name);				  // string constructor
 	~ClapTrap(void);						  // Destructor
 	ClapTrap(ClapTrap const &src);			  // Constructor per Copy
 	ClapTrap &operator=(ClapTrap const &rhs); // Operator Overload
-											  // getter & setter
+
+	// getter & setter
 	int getDamage(void) const;
 	int getPdv(void) const;
 	int getEnergy(void) const;
@@ -28,6 +29,9 @@ public:
 	void beRepaired(unsigned int amount);
 
 protected:
+
+	ClapTrap(void);				  			  // default constructor
+
 	std::string _name;
 	int _pdv;
 	int _energy;

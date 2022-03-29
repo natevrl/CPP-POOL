@@ -17,7 +17,6 @@ public:
 	void attack(const std::string &target);
 
 private:
-
 };
 
 std::ostream &operator<<(std::ostream &o, ScavTrap const &rhs);

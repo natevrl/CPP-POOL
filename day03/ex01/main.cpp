@@ -3,7 +3,7 @@
 int main(void)
 {
     ScavTrap scav("BillyBob");
-    ClapTrap test("TEEEEEST");
+    ClapTrap test("Clappy");
 
     std::cout << std::endl;
     std::cout << "ClapTrap " << test.getName() << "'s life : " << test.getPdv() << std::endl;
@@ -25,3 +25,4 @@ int main(void)
 
     return 0;
 }
+

@@ -1,18 +1,19 @@
 #include "ScavTrap.hpp"
 
 // ------------- Init Canonique -----------
-ScavTrap::ScavTrap(std::string name) : ClapTrap::ClapTrap(name)
+ScavTrap::ScavTrap(std::string name)
 {
-	std::cout << "ScavTrap init" << std::endl;
-	this->ClapTrap::_damage = 20;
-	this->ClapTrap::_energy = 50;
-	this->ClapTrap::_pdv = 100;
+	std::cout << "ScavTrap init (string constructor called)" << std::endl;
+	this->_name = name;
+	ClapTrap::_damage = 20;
+	ClapTrap::_energy = 50;
+	ClapTrap::_pdv = 100;
 	return ;
 }
 
 ScavTrap::~ScavTrap(void) // Destructor  
 { 
-        std::cout << "ScavTrap is done" << std::endl;
+        std::cout << "ScavTrap is done (default destructor called)" << std::endl;
         return ; 
 }
 

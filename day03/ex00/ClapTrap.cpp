@@ -3,10 +3,20 @@
 // ------------- Init Canonique -----------
 ClapTrap::ClapTrap(std::string name) : _name(name)
 { 
-        std::cout << name <<" is alive" << std::endl;
+        std::cout << "string constructor calld : " << name <<" is alive" << std::endl;
 		this->_damage = 0;
 		this->_energy = 10;
 		this->_pdv = 10;
+        return ;
+} 
+
+ClapTrap::ClapTrap(void) // default constructor
+{ 
+		this->_name = "default";
+		this->_damage = 0;
+		this->_energy = 10;
+		this->_pdv = 10;
+        std::cout  << "Default constructor calld : "<< this->_name <<" is alive" << std::endl;
         return ;
 } 
 

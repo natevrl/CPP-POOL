@@ -1,9 +1,16 @@
 #include "ClapTrap.hpp"
 
 // ------------- Init Canonique -----------
+
+ClapTrap::ClapTrap(void): _name(""), _pdv(10), _energy(10), _damage(0)
+{
+	std::cout << "ClapTrap's default constructor called" << std::endl;
+	return ;
+}
+
 ClapTrap::ClapTrap(std::string name) : _name(name)
 { 
-        std::cout << "ClapTrap init" << std::endl;
+        std::cout << "ClapTrap init (string constructor called)" << std::endl;
 		this->_damage = 0;
 		this->_energy = 10;
 		this->_pdv = 10;
@@ -12,7 +19,7 @@ ClapTrap::ClapTrap(std::string name) : _name(name)
 
 ClapTrap::~ClapTrap(void) // Destructor  
 { 
-        std::cout << "ClapTrap is done" << std::endl;
+        std::cout << "ClapTrap is done (default destructor called)" << std::endl;
         return ; 
 }
 
@@ -64,10 +71,10 @@ void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (this->_pdv  <= 0)
 	{
-		std::cout << this->getName() <<  " can't be attacked, he have no more points life" << std::endl;
+		std::cout << "ClapTrap " << this->getName() <<  " can't be attacked, he have no more points life" << std::endl;
 		return ;
 	}
-	std::cout << this->getName() <<  " has been attacked, losing : " 
+	std::cout << "ClapTrap " << this->getName() <<  " has been attacked, losing : " 
 	<< amount << " life points!" << std::endl;
 	this->_pdv -= amount;
 }
@@ -76,10 +83,10 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (this->_energy <= 0)
 	{
-		std::cout <<  this->getName() <<  " haven't enough energy" << std::endl;
+		std::cout << "ClapTrap " <<  this->getName() <<  " haven't enough energy" << std::endl;
 		return ;
 	}
-	std::cout <<  this->getName() <<  " repairing " 
+	std::cout << "ClapTrap " <<  this->getName() <<  " repairing " 
 	<< amount << " life points" << std::endl;
 	this->_pdv += amount;
 	this->_energy -= 1;

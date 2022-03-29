@@ -9,7 +9,8 @@ class ClapTrap
 {
 	public:
     // canonique form
-		ClapTrap(std::string name); // default constructor
+		ClapTrap(void); // default constructor
+		ClapTrap(std::string name); // string constructor
 		~ClapTrap(void); // Destructor
 		ClapTrap (ClapTrap const &src); // Constructor per Copy
 		ClapTrap & operator=(ClapTrap const &rhs); // Operator Overload
