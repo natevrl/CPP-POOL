@@ -3,17 +3,17 @@
 // ------------- Init Canonique -----------
 ScavTrap::ScavTrap(std::string name)
 {
-	std::cout << "ScavTrap init (string constructor called)" << std::endl;
+	std::cout << "ScavTrap different initialization (string constructor called)" << std::endl;
 	this->_name = name;
-	ClapTrap::_damage = 20;
-	ClapTrap::_energy = 50;
-	ClapTrap::_pdv = 100;
+	this->_damage = 20;
+	this->_energy = 50;
+	this->_pdv = 100;
 	return ;
 }
 
 ScavTrap::~ScavTrap(void) // Destructor  
 { 
-        std::cout << "ScavTrap is done (default destructor called)" << std::endl;
+        std::cout << "ScavTrap different destruction (default destructor called)" << std::endl;
         return ; 
 }
 
