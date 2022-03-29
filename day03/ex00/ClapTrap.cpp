@@ -97,17 +97,17 @@ void ClapTrap::attack(const std::string& target)
 	this->_energy -= 1;
 }
 
-// ClapTrap & ClapTrap::operator=(ClapTrap const &rhs) // Operator Overload =
-// {
-//         std::cout << "Copy assignment operator called" << std::endl;
-//         if ( this != &rhs) // this = pointeur (contient une adresse) & rhs = reference(contient une valeur)
-//                 this->_ClapTrap_float = rhs.getRawBits();
-//         return *this;
-// }
+ClapTrap & ClapTrap::operator=(ClapTrap const &rhs) // Operator Overload =
+{
+        std::cout << "Copy assignment operator called" << std::endl;
+        if ( this != &rhs) // this = pointeur (contient une adresse) & rhs = reference(contient une valeur)
+                this->_name = rhs.getName();
+        return *this;
+}
 
 
-// std::ostream & operator<<(std::ostream & o, ClapTrap const & rhs )
-// {
-//         o << rhs.getRawBits();
-//         return o;
-// }
+std::ostream & operator<<(std::ostream & o, ClapTrap const & rhs )
+{
+        o << rhs.getName();
+        return o;
+}

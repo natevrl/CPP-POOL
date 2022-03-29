@@ -4,6 +4,8 @@
 #include <cstdio>
 #include <iostream>
 #include <iomanip>
+
+#include <ScavTrap.hpp>
  
 class ClapTrap 
 {

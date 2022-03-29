@@ -12,7 +12,7 @@ class ClapTrap
 		ClapTrap(std::string name); // default constructor
 		~ClapTrap(void); // Destructor
 		ClapTrap (ClapTrap const &src); // Constructor per Copy
-		// ClapTrap & operator=(ClapTrap const &rhs); // Operator Overload
+		ClapTrap & operator=(ClapTrap const &rhs); // Operator Overload
     // getter & setter
         int getDamage(void) const;
         int getPdv(void) const;
@@ -35,6 +35,6 @@ class ClapTrap
 
 };
 
-// std::ostream & operator<<(std::ostream & o, ClapTrap const & rhs );
+std::ostream & operator<<(std::ostream & o, ClapTrap const & rhs );
 
 #endif // !ClapTrap_H

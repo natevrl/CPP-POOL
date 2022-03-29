@@ -3,7 +3,9 @@
 int main(void)
 {
     ClapTrap test("test");
+    ScavTrap scav;
 
+    scav.
     std::cout << "ClapTrap " << test.getName() << "'s life : " << test.getPdv() << std::endl;
     std::cout << "ClapTrap " << test.getName() << "'s energy : " << test.getEnergy() << std::endl << std::endl;;
     test.takeDamage(5);
