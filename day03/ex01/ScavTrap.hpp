@@ -5,19 +5,21 @@
 
 class ClapTrap;
 
-class ScavTrap : public ClapTrap 
+class ScavTrap : public ClapTrap
 {
-    public:
-        ScavTrap(std::string name); // default constructor
-        // ~ScavTrap(void); // Destructor
-        ScavTrap (ScavTrap const &src); // Constructor per Copy
-        ScavTrap & operator=(ScavTrap const &rhs); // Operator Overload
+public:
+    ScavTrap(std::string name);               // default constructor
+    ~ScavTrap(void);                          // Destructor
+    ScavTrap(ScavTrap const &src);            // Constructor per Copy
+    ScavTrap &operator=(ScavTrap const &rhs); // Operator Overload
 
-         private:
-            std::string _name;
-            int _pdv;
-            int _energy;
-            int _damage;
+    void guardGate();
+	void attack(const std::string &target);
+
+private:
+
 };
+
+std::ostream &operator<<(std::ostream &o, ScavTrap const &rhs);
 
 #endif // SCAVTRAP_H
