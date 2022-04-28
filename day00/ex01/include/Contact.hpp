@@ -5,7 +5,6 @@
 #include <cstdio>
 #include <iostream>
 
-
 class Contact
 {
 

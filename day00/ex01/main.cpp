@@ -5,17 +5,19 @@
 int main(void)
 {
 
-	string stdin;
+	std::string stdin;
 	PhoneBook repertoire;
 
-	getline(cin, stdin);
+	std::getline(std::cin, stdin);
 	while (stdin != "EXIT")
 	{
 		if (stdin == "ADD")
 			repertoire.GetNewUser();
 		else if (stdin == "SEARCH")
 			repertoire.HandlerSearchCmd();
-		getline(cin, stdin);
+		else
+			std::cout << "command : ADD || SEARCH || EXIT"<< std::endl;
+		std::getline(std::cin, stdin);
 	}
 	return 0;
 }
