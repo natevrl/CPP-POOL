@@ -1,6 +1,13 @@
 #include "ScavTrap.hpp"
 
 // ------------- Init Canonique -----------
+
+ScavTrap::ScavTrap(void): _name("default"), _pdv(10), _energy(10), _damage(0)
+{
+	std::cout << "ScavTrap's default constructor called" << std::endl;
+	return ;
+}
+
 ScavTrap::ScavTrap(std::string name)
 {
 	std::cout << "ScavTrap different initialization (string constructor called)" << std::endl;

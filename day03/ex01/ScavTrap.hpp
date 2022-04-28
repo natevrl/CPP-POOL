@@ -8,11 +8,11 @@ class ClapTrap;
 class ScavTrap : public ClapTrap
 {
 public:
-    ScavTrap(std::string name);               // default constructor
+    ScavTrap(std::string name);               // string constructor
+    ScavTrap(void);
     ~ScavTrap(void);                          // Destructor
     ScavTrap(ScavTrap const &src);            // Constructor per Copy
     ScavTrap &operator=(ScavTrap const &rhs); // Operator Overload
-
     void guardGate();
 	void attack(const std::string &target);
 

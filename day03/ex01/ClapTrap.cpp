@@ -2,13 +2,13 @@
 
 // ------------- Init Canonique -----------
 
-ClapTrap::ClapTrap(void): _name(""), _pdv(10), _energy(10), _damage(0)
+ClapTrap::ClapTrap(void): _name("default"), _pdv(10), _energy(10), _damage(0)
 {
 	std::cout << "ClapTrap's default constructor called" << std::endl;
 	return ;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name)
+ClapTrap::ClapTrap(std::string name) : _name(name) //string constructor 
 { 
         std::cout << "ClapTrap init (string constructor called)" << std::endl;
 		this->_damage = 0;
