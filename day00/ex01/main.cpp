@@ -19,5 +19,5 @@ int main(void)
 			std::cout << "command : ADD || SEARCH || EXIT"<< std::endl;
 		std::getline(std::cin, stdin);
 	}
-	return (0);
+	return 0;
 }
