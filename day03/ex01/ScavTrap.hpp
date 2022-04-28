@@ -9,7 +9,7 @@ class ScavTrap : public ClapTrap
 {
 public:
     ScavTrap(std::string name);               // string constructor
-    ScavTrap(void);
+    ScavTrap(void);                           // default constructor
     ~ScavTrap(void);                          // Destructor
     ScavTrap(ScavTrap const &src);            // Constructor per Copy
     ScavTrap &operator=(ScavTrap const &rhs); // Operator Overload

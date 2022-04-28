@@ -2,7 +2,6 @@
 # define PHONEBOOK_H
 
 #include <string>
-#include <string.h>
 #include <cstdio>
 #include <iostream>
 #include <iomanip>
