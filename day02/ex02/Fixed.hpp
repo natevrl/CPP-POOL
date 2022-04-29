@@ -15,7 +15,23 @@ class Fixed
 		~Fixed(void); // Destructor
 		Fixed (Fixed const &src); // Constructor per Copy
 		void operator=(Fixed const &rhs); // copy overload =
+		bool operator==(const Fixed &fix) const;
+		bool operator<=(const Fixed &fix) const;
+		bool operator>=(const Fixed &fix) const;
+		bool operator!=(const Fixed &fix) const;
+		bool operator<(const Fixed &fix) const;
+		bool operator>(const Fixed &fix) const;
 
+		Fixed operator+(const Fixed &fix);
+		Fixed operator-(const Fixed &fix);
+		Fixed operator*(const Fixed &fix);
+		Fixed operator/(const Fixed &fix);
+
+
+		static const Fixed min(Fixed &fix1, Fixed &fix2);
+		static const Fixed max(Fixed &fix1, Fixed &fix2);
+		// static const Fixed min(const Fixed &fix1, const Fixed &fix2);
+		// static const Fixed max(const Fixed &fix1, const Fixed &fix2);
 
 		 int getRawBits( void ) const;
 		 void setRawBits( int const raw );

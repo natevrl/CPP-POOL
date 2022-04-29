@@ -54,6 +54,72 @@ void Fixed::operator=(Fixed const &rhs) // Operator Overload =
 	return;
 }
 
+bool Fixed::operator==(const Fixed &fix) const
+{
+	return (this->_fixed_point == fix.getRawBits());
+}
+
+bool Fixed::operator!=(const Fixed &fix) const
+{
+	return (this->_fixed_point != fix.getRawBits());
+}
+
+bool Fixed::operator<=(const Fixed &fix) const
+{
+	return (this->_fixed_point <= fix.getRawBits());
+}
+
+bool Fixed::operator>=(const Fixed &fix) const
+{
+	return (this->_fixed_point >= fix.getRawBits());
+}
+
+bool Fixed::operator>(const Fixed &fix) const
+{
+	return (this->_fixed_point > fix.getRawBits());
+}
+
+bool Fixed::operator<(const Fixed &fix) const
+{
+	return (this->_fixed_point < fix.getRawBits());
+}
+
+
+Fixed Fixed::operator+(const Fixed &fix)
+{
+	return (this->_fixed_point + fix.getRawBits());
+}
+
+Fixed Fixed::operator-(const Fixed &fix)
+{
+	return (this->_fixed_point - fix.getRawBits());
+}
+
+Fixed Fixed::operator*(const Fixed &fix)
+{
+	return (this->_fixed_point * fix.getRawBits());
+}
+
+Fixed Fixed::operator/(const Fixed &fix)
+{
+	return (this->_fixed_point / fix.getRawBits());
+}
+
+static const Fixed min(Fixed &fix1, Fixed &fix2)
+{
+	if (fix1 < fix2)
+		return fix1;
+	return fix2;
+}
+
+static const Fixed max(Fixed &fix1, Fixed &fix2)
+{
+	if (fix1.getRawBits() > fix2.getRawBits())
+		return fix1;
+	return fix2;
+}
+
+
 int Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called" << std::endl;

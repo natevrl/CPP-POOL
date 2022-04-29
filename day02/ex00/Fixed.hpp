@@ -19,7 +19,7 @@ class Fixed
 		 void setRawBits( int const raw );
 
 	private:
-		int _fixed_float;
+		int _fixed_point;
 		static const int _bits;
 };
 
