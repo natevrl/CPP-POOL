@@ -13,11 +13,12 @@ Karen::~Karen()
 void Karen::complain( std::string level )
 {
 	void (Karen::*ComplainPtr[4])() = { &Karen::debug, &Karen::info, &Karen::warning, &Karen::error };
-	std::string ComplainArray[4] = {"debut", "info", "warning", "error"}; 
+	std::string ComplainArray[4] = {"debug", "info", "warning", "error"}; 
 
 	for (size_t i = 0; i < 4; i++)
 		if (ComplainArray[i] == level)
 			return ((this->*ComplainPtr[i])());
+	std::cout << "Functon does not exist" << std::endl;
 	
 };
 

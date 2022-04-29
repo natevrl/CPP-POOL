@@ -3,7 +3,7 @@
 
 void Zombie::Announce(void) const
 {
-	std::cout << _name + ": BraiiiiiiinnnzzzZ..." << std::std::endl;
+	std::cout << _name + ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 // Zombie::Zombie(std::string nom): name(nom) {

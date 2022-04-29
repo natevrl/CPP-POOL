@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	int HordeNumbers = 2;
+	int HordeNumbers = 4;
 	Zombie *horde = zombieHorde(HordeNumbers, "test");
 	for(int i = 0; i < HordeNumbers; i++)
 		horde[i].Announce();
