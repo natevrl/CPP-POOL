@@ -1,8 +1,8 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void)
 {
-    ScavTrap scav("BillyBob");
+    FragTrap scav("BillyBob");
     ClapTrap test("Scappy");
 
     std::cout << std::endl;
@@ -10,7 +10,7 @@ int main(void)
     std::cout << "ClapTrap " << test.getName() << "'s attack damages : " << test.getDamage() << std::endl;
 
     std::cout << std::endl;
-    scav.guardGate();
+    // scav;
     scav.attack("test");
     std::cout << "ScavTrap " << scav.getName() << "'s life : " << scav.getPdv() << std::endl;
     std::cout << "ScavTrap " << scav.getName() << "'s energy : " << scav.getEnergy() << std::endl;
