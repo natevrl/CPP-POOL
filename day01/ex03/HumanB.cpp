@@ -14,8 +14,12 @@ HumanB::~HumanB()
 
 void HumanB::attack(void) const
 {
+	std::cout << "value of weapon : " << this->_weapon << std::endl;
 	if (!this->_weapon)
+	{
 		std::cout << this->_name <<" has no weap to attacks" << std::endl;
+		return ;
+	}
 	else
 		std::cout << this->_name << " attacks with their " << this->_weapon->getType() << std::endl;
 };

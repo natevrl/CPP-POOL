@@ -14,7 +14,7 @@ class PhoneBook
 private:
 	int		_UserNumber;
 	void	_GetShortUserInfo(void) const;
-	std::string	_UserList[8][5];
+	std::string	_UserList[1024][5];
 	void 	_Print_UserList(int index) const;
 	bool 	_PrintCorrectIndex(void) const;
 

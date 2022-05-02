@@ -10,9 +10,10 @@ class Contact
 
 	public:		
 		void	CreateContact(void);
-		std::string ContactData[5];
-
+		std::string getContactData(int i);
+		
 	private:
+		std::string _contactData[5];
 
 };
 

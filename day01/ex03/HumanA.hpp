@@ -1,5 +1,5 @@
 #ifndef HUMANA_H
-# define HUMANBA_H
+# define HUMANA_H
 
 #include <string>
 #include <string.h>

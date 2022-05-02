@@ -18,30 +18,33 @@ void PhoneBook::GetNewUser(void)
 		
 	Contact user;
 	
-	if (this->_UserNumber > 7)
-	{
-		printf("TOO MUCH USER, 8 MAX\n");
-		return ;
-	}
 	user.CreateContact();
 	for (int i = 0; i < 5; i++)
-		this->_UserList[this->_UserNumber][i] = user.ContactData[i];
+	{
+		if (this->_UserNumber > 7)
+			this->_UserList[this->_UserNumber % 8][i] = user.getContactData(i);
+		else
+			this->_UserList[this->_UserNumber][i] = user.getContactData(i);
+
+	}
 	this->_UserNumber++;
 }
 
 void PhoneBook::_GetShortUserInfo(void) const
 {
 	std::string tmp;
-	for(int y = 0; y < this->_UserNumber; y++)
+	for(int y = 0; y < this->_UserNumber && y < 8; y++)
 	{
 		std::cout << std::setw(10) << y << "|";
 		for (int i = 0; i < 3; i++)
 		{
+
 			if (this->_UserList[y][i].size() > 10)
 			{
 				tmp = this->_UserList[y][i];
 				tmp[9] = '.';
 				std::cout << std::setw(10) << tmp.substr(0, 10) << "|";
+
 			}
 			else
  				std::cout << std::setw(10) <<  this->_UserList[y][i].substr(0, 10) << "|";
@@ -61,7 +64,7 @@ bool PhoneBook::_PrintCorrectIndex(void) const
 {
 	int i;
 	std::cout << "Choose a correct index to print : ";
-	if (std::cin >> i && i < this->_UserNumber)  
+	if (std::cin >> i && i < this->_UserNumber && i < 8)  
 		return (this->_Print_UserList(i), true);
 	else
 		return (std::cout << "\e[31m[Error] : \e[0m",  std::cin.clear(),  std::cin.ignore(1024, '\n'), false);
@@ -72,7 +75,7 @@ void PhoneBook::HandlerSearchCmd(void) const
 	if (this->_UserNumber != 0)
 	{
 		this->_GetShortUserInfo();
-		while (!this->_PrintCorrectIndex());
+		while (!this->_PrintCorrectIndex() && !std::cin.eof());
 	}
 	else
 		std::cout << "You need to ADD one contact before" << std::endl;

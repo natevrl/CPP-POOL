@@ -6,6 +6,7 @@ int main(int ac, char const *av[])
 	std::string s1, s2, file, buf, replace;
 	size_t i;
 
+	printf("MODFIS QUAND MEME STR s1 & s2\n");
 	//handle args error
 	if (ac != 4)
 		return (std::cout << "needs 3 args" << std::endl, -1);

@@ -8,14 +8,24 @@
 
 void Contact::CreateContact(void)
 {
-	std::cout << "first name : ";
-	std::getline(std::cin, this->ContactData[0]);
-	std::cout << "last name : ";
-	std::getline(std::cin, this->ContactData[1]);
-	std::cout << "nickname : ";
-	std::getline(std::cin, this->ContactData[2]);
-	std::cout << "darkest secret : ";
-	std::getline(std::cin, this->ContactData[3]);
-	std::cout << "phone number : ";
-	std::getline(std::cin, this->ContactData[4]);
+	if (!std::cin.eof()) { std::cout << "first name : "; }
+	while (std::getline(std::cin, this->_contactData[0]) && this->_contactData[0] == "\0")
+		std::cout << "Empty field detected, first name : ";
+	if (!std::cin.eof()) { std::cout << "last name : "; }
+	while (std::getline(std::cin, this->_contactData[1]) && this->_contactData[1] == "\0")
+		std::cout << "Empty field detected, last name : ";
+	if (!std::cin.eof()) { std::cout << "nickname : "; }
+	while (std::getline(std::cin, this->_contactData[2]) && this->_contactData[2] == "\0")
+		std::cout << "Empty field detected, nickname :  ";
+	if (!std::cin.eof()) { std::cout << "darkest secret : "; }
+	while (std::getline(std::cin, this->_contactData[3]) && this->_contactData[3] == "\0")
+		std::cout << "Empty field detected, darkest secret : ";
+	if (!std::cin.eof()) { std::cout << "phone number : "; }
+	while (std::getline(std::cin, this->_contactData[4]) && this->_contactData[4] == "\0")
+		std::cout << "Empty field detected, phone number : ";
+}
+
+std::string Contact::getContactData(int i) 
+{
+	return (this->_contactData[i]);
 }
