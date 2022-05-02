@@ -2,9 +2,9 @@
 #include "Weapon.hpp"
 
 
-HumanB::HumanB(std::string name): _name(name)
+HumanB::HumanB(std::string name): _name(name) 
 {
-	;
+	this->_weapon = NULL;
 };
 
 HumanB::~HumanB()
@@ -14,7 +14,6 @@ HumanB::~HumanB()
 
 void HumanB::attack(void) const
 {
-	std::cout << "value of weapon : " << this->_weapon << std::endl;
 	if (!this->_weapon)
 	{
 		std::cout << this->_name <<" has no weap to attacks" << std::endl;
