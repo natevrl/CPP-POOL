@@ -6,7 +6,6 @@ int main(int ac, char const *av[])
 	std::string s1, s2, file, buf, replace;
 	size_t i;
 
-	printf("MODFIS QUAND MEME STR s1 & s2\n");
 	//handle args error
 	if (ac != 4)
 		return (std::cout << "needs 3 args" << std::endl, -1);
@@ -30,14 +29,18 @@ int main(int ac, char const *av[])
 	// replace all s1 occurence on filestream by s2
 	// npos = greatest possible value for an element of type size_t.
 	// find = return first char of occurence s1
-	buf.clear();
-	while ((i = file.find(s1)) != std::string::npos)
+	if (s1 != s2)
 	{
-		buf = file.erase(i, s1.length()).insert(i, s2);
-		// std::cout << buf << std::endl;
-		// printf("%ld\n", i);
+		buf.clear();
+		while ((i = file.find(s1)) != std::string::npos)
+		{
+			buf = file.erase(i, s1.length()).insert(i, s2);
+			// std::cout << buf << std::endl;
+			// printf("%ld\n", i);
+		}
 	}
-
+	else
+		buf = file;
 	// writing the buffer on the new file : <filestream>.replace
 	replace = ".replace";
 	std::ofstream writingStream(filestream.append(".replace").c_str());
