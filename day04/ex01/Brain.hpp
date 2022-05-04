@@ -5,7 +5,6 @@
 #include <iostream>
 #include <iomanip>
 
-#include "Animal.hpp"
 
 class Brain
 {

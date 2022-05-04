@@ -10,7 +10,7 @@ class Animal
 public:
     // Canonical form
     Animal(void);
-    ~Animal(void);
+    virtual ~Animal(void);
     Animal(const Animal &copy);
     Animal &operator=(const Animal &cmp);
 

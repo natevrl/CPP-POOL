@@ -1,9 +1,10 @@
 SRCS =  main.cpp \
+		Brain.cpp \
 		Animal.cpp \
 		Dog.cpp \
 		Cat.cpp \
 		WrongAnimal.cpp \
-		WrongCat.cpp
+		WrongCat.cpp \
 
 # INCLUDE =	-I ./include
 

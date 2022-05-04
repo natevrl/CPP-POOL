@@ -6,13 +6,14 @@
 #include <iomanip>
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal
 {
     public:
         // Canonical form
         Cat(void);
-        ~Cat(void);
+        virtual ~Cat(void);
         Cat(const Cat &copy);
         Cat &operator=(const Cat &cmp);
 
@@ -20,7 +21,7 @@ class Cat : public Animal
         virtual void makeSound(void) const;
 
     private:
-        ;
+        Brain *brain;
     protected:
         std::string type;
         

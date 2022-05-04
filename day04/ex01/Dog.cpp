@@ -12,6 +12,7 @@ Dog::Dog(void) : type("Dog")
 Dog::~Dog(void) // Destructor  
 { 
         std::cout << "Dog is done (default destructor called)" << std::endl;
+        delete(this->brain);
         return ; 
 }
 

@@ -5,12 +5,14 @@
 Cat::Cat(void) : type("Cat")
 {
         std::cout << "Cat's default constructor called" << std::endl;
+        this->brain = new Brain();
         return ;
 }
 
 Cat::~Cat(void) // Destructor  
 { 
         std::cout << "Cat is done (default destructor called)" << std::endl;
+        delete(this->brain);
         return ; 
 }
 
