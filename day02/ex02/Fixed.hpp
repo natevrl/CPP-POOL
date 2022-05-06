@@ -27,11 +27,15 @@ class Fixed
 		Fixed operator*(const Fixed &fix);
 		Fixed operator/(const Fixed &fix);
 
+		Fixed operator++(void);
+		Fixed operator++(int);
+		Fixed operator--(void);
+		Fixed operator--(int);
+
 
 		static const Fixed min(Fixed &fix1, Fixed &fix2);
-		static const Fixed max(Fixed &fix1, Fixed &fix2);
-		// static const Fixed min(const Fixed &fix1, const Fixed &fix2);
-		// static const Fixed max(const Fixed &fix1, const Fixed &fix2);
+		static const Fixed max(Fixed const &fix1, Fixed const &fix2);
+
 
 		 int getRawBits( void ) const;
 		 void setRawBits( int const raw );
