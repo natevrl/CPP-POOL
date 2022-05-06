@@ -1,6 +1,6 @@
 SRCS =  main.cpp \
 		Brain.cpp \
-		Animal.cpp \
+		AAnimal.cpp \
 		Dog.cpp \
 		Cat.cpp \
 		WrongAnimal.cpp \

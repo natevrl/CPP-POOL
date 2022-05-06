@@ -4,28 +4,18 @@
 
 int main()
 {
-    int number = 4;
-    const Animal *animals[number];
-    const Animal *test_copy = new Cat();
 
-    for (int i = 0; i < number; i++)
-    {
-        if (i % 2 == 0)
-            animals[i] = new Dog();
-        else
-            animals[i] = new Cat();
-    }
+    AAnimal *dog = new Dog();
+    AAnimal *cat = new Cat();
+    cat->makeSound();
+    dog->makeSound();
+    std::cout << cat->getType() << std::endl;
+    std::cout << dog->getType() << std::endl;
+    delete dog;
+    delete cat;
+    AAnimal abstract;
+    AAnimal *abstract2 = new AAnimal();
 
-    animals[0]->makeSound();
-    test_copy->makeSound();
-    delete test_copy;
-    test_copy = animals[0];
-    animals[0]->makeSound();
-    test_copy->makeSound();
-
-    for (int i = 0; i < number; i++)
-        delete animals[i];
-    // delete test_copy;
 
     return 0;
 }

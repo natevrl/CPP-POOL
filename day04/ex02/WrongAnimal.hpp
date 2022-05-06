@@ -1,5 +1,5 @@
-#if !defined(WRONGANIMAL_H)
-#define WRONGANIMAL_H
+#if !defined(WrongAnimal_H)
+#define WrongAnimal_H
 
 #include <cstdio>
 #include <iostream>
@@ -25,4 +25,4 @@ protected:
 };
 
 
-#endif // WRONGANIMAL_H
+#endif // WrongAnimal_H
