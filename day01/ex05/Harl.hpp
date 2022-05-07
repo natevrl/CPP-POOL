@@ -1,12 +1,12 @@
-#ifndef KAREN_H
-# define KAREN_H
+#ifndef Harl_H
+# define Harl_H
 
 #include <string>
 #include <cstdio>
 #include <iostream>
 #include <iomanip>
 
-class Karen
+class Harl
 {
 private:
 	void debug( void );
@@ -14,10 +14,10 @@ private:
 	void warning( void );
 	void error( void );
 public:
-	Karen(/* args */);
-	~Karen();
+	Harl(/* args */);
+	~Harl();
 	void complain( std::string level );
 };
 
 
-#endif // !KAREN_H
+#endif // !Harl_H

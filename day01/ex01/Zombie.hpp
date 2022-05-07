@@ -19,6 +19,7 @@ public:
 	Zombie(void);
 	void Announce(void) const;
 	void setName(std::string newName);
+	std::string getName(void);
 
 };
 

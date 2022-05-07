@@ -1,11 +1,11 @@
-#include "Karen.hpp"
+#include "Harl.hpp"
 
 int main()
 {
-	Karen test;
-	test.complain("debug");
+	Harl test;
+	test.complain("");
 	std::cout << std::endl;
-	test.complain("warning");
+	test.complain("debug");
 	std::cout << std::endl;
 	test.complain("info");
 	std::cout << std::endl;

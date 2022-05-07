@@ -8,13 +8,15 @@
 #include <iomanip>
 
 
-class Zombie {
-private:
-	std::string name;
+class Zombie 
+{
+	private:
+		std::string _name;
 
-public:
-	Zombie(std::string n);
-	void Announce(void);
+	public:
+		Zombie(std::string n);
+		~Zombie(void);
+		void Announce(void);
 };
 
 Zombie* newZombie( std::string name );

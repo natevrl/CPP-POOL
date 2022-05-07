@@ -1,5 +1,5 @@
 SRCS =  main.cpp \
-		Karen.cpp \
+		Harl.cpp \
 
 
 # INCLUDE =	-I ./include
@@ -7,7 +7,7 @@ SRCS =  main.cpp \
 
 OBJS = ${SRCS:.cpp=.o}
 
-NAME = karen
+NAME = harl
 
 COMPIL = c++ -std=c++98 -Wall -Werror -Wextra
 

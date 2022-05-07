@@ -3,7 +3,7 @@
 int main(void)
 {
 	int HordeNumbers = 4;
-	Zombie *horde = zombieHorde(HordeNumbers, "test");
+	Zombie *horde = zombieHorde(HordeNumbers, "awdadw");
 	for(int i = 0; i < HordeNumbers; i++)
 		horde[i].Announce();
 	delete [] horde;
